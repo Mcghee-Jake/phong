@@ -127,10 +127,14 @@ function updateAndRender() {
     var aspectRatio = gl.canvasWidth / gl.canvasHeight;
     	
 	
+	camera.update();
+	
     // todo 
     // add keyboard controls for changing light direction here
 	if (appInput.up) {
-		lightDirection = lightDirection.add(new Vector3(5, 0, 0);
+		lightDirection.y += .03;
+	} else if (appInput.down) {
+		lightDirection.y -= .03;
 	}
 
 
